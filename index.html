@@ -41,16 +41,19 @@
       z-index: 1000;
     }
 
-    .brand {
-      font-size: 25px;
-      font-weight: 800;
-      color: #555;
-      letter-spacing: 1px;
-    }
+   .brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
 
-    .brand span {
-      color: #00c936;
-    }
+.brand img {
+  display: block;
+  width: 210px;
+  height: 70px;
+  object-fit: contain;
+  object-position: left center;
+}
 
     nav a {
       text-decoration: none;
@@ -370,9 +373,9 @@
 
 <header>
 
-  <div class="brand">
-    VULEDZA<span>HAUL</span>
-  </div>
+ <a href="#home" class="brand">
+  <img src="logo.png" alt="VULEDZAHAUL Logistics & Transport">
+</a>
 
   <nav>
     <a href="#home">Home</a>
