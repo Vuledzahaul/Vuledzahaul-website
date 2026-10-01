@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>VULEDZAHAUL | Logistics & Transport</title>
+
+  <meta name="description"
+        content="VULEDZAHAUL provides freight brokerage, logistics and transport solutions across South Africa.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #333;
+      background: #fff;
+      line-height: 1.6;
+    }
+
+    /* NAVIGATION */
+
+    header {
+      background: #ffffff;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .brand {
+      font-size: 25px;
+      font-weight: 800;
+      color: #555;
+      letter-spacing: 1px;
+    }
+
+    .brand span {
+      color: #00c936;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #444;
+      margin-left: 25px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #00c936;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 78vh;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(25,25,25,0.94),
+          rgba(25,25,25,0.72)
+        );
+      display: flex;
+      align-items: center;
+      padding: 80px 8%;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 750px;
+    }
+
+    .eyebrow {
+      color: #00d63b;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+
+    .hero h1 {
+      font-size: 62px;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #00d63b;
+    }
+
+    .hero p {
+      max-width: 650px;
+      font-size: 19px;
+      color: #e6e6e6;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .btn-primary {
+      background: #00c936;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #00ad2e;
+    }
+
+    .btn-secondary {
+      border: 2px solid white;
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background: white;
+      color: #333;
+    }
+
+    /* GENERAL SECTIONS */
+
+    section {
+      padding: 80px 8%;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 50px;
+    }
+
+    .section-heading span {
+      color: #00c936;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+    }
+
+    .section-heading h2 {
+      font-size: 38px;
+      margin: 8px 0 12px;
+      color: #333;
+    }
+
+    .section-heading p {
+      color: #666;
+    }
+
+    /* SERVICES */
+
+    .services {
+      background: #f7f8f7;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .service-card {
+      background: white;
+      padding: 35px 25px;
+      border-radius: 8px;
+      border-bottom: 4px solid transparent;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+      transition: 0.25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-bottom-color: #00c936;
+    }
+
+    .service-icon {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .service-card p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* ABOUT */
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      max-width: 1150px;
+      margin: auto;
+      align-items: center;
+    }
+
+    .about h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .about h2 span {
+      color: #00c936;
+    }
+
+    .about p {
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .about-box {
+      background: #222;
+      color: white;
+      padding: 45px;
+      border-radius: 10px;
+    }
+
+    .about-box h3 {
+      color: #00d63b;
+      margin-bottom: 15px;
+    }
+
+    .about-box p {
+      color: #ddd;
+    }
+
+    /* CTA */
+
+    .cta {
+      background: #00c936;
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .cta p {
+      margin-bottom: 25px;
+      font-size: 17px;
+    }
+
+    .cta .btn {
+      background: white;
+      color: #222;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #1d1d1d;
+      color: #ccc;
+      padding: 45px 8%;
+      text-align: center;
+    }
+
+    footer strong {
+      color: white;
+      font-size: 20px;
+    }
+
+    footer span {
+      color: #00d63b;
+    }
+
+    footer p {
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+
+      nav {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 45px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      header {
+        padding: 16px 5%;
+      }
+
+      .brand {
+        font-size: 20px;
+      }
+
+      .hero {
+        padding: 60px 6%;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 60px 6%;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading h2 {
+        font-size: 30px;
+      }
+
+      .cta h2 {
+        font-size: 30px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="brand">
+    VULEDZA<span>HAUL</span>
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        LOGISTICS & TRANSPORT
+      </div>
+
+      <h1>
+        Moving What <span>Matters.</span>
+      </h1>
+
+      <p>
+        Reliable freight, logistics and transport solutions
+        connecting businesses and people across South Africa.
+      </p>
+
+      <div class="buttons">
+
+        <a href="#contact" class="btn btn-primary">
+          Request a Quote
+        </a>
+
+        <a href="#services" class="btn btn-secondary">
+          Explore Our Services
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICES -->
+
+  <section class="services" id="services">
+
+    <div class="section-heading">
+
+      <span>What We Do</span>
+
+      <h2>Transport Solutions Built Around You</h2>
+
+      <p>
+        From connecting cargo with transport providers to
+        coordinating logistics and developing our own transport
+        operations, VULEDZAHAUL is built to keep things moving.
+      </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+      <div class="service-card">
+
+        <div class="service-icon">🚛</div>
+
+        <h3>Freight Brokerage</h3>
+
+        <p>
+          Connecting businesses that need goods transported
+          with suitable and reliable transport providers.
+        </p>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-icon">📦</div>
+
+        <h3>Logistics Solutions</h3>
+
+        <p>
+          Coordinating freight movements, deliveries,
+          routes and logistics requirements.
+        </p>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-icon">🚚</div>
+
+        <h3>Transport Services</h3>
+
+        <p>
+          Road transport and delivery solutions through
+          our transport network and developing fleet.
+        </p>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-icon">🚌</div>
+
+        <h3>Passenger Transport</h3>
+
+        <p>
+          A developing division focused on shuttle,
+          corporate, transfer and tourism transport solutions.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="about">
+
+      <div>
+
+        <h2>
+          About <span>VULEDZAHAUL</span>
+        </h2>
+
+        <p>
+          VULEDZAHAUL Logistics is a South African transport
+          and logistics company focused on connecting businesses
+          with dependable transportation solutions.
+        </p>
+
+        <p>
+          We are building a logistics network that combines
+          freight brokerage, logistics coordination and transport
+          services while working toward expanding our own fleet.
+        </p>
+
+        <p>
+          Our goal is simple: make moving goods and people
+          more reliable, efficient and professional.
+        </p>
+
+      </div>
+
+
+      <div class="about-box">
+
+        <h3>Our Mission</h3>
+
+        <p>
+          To provide dependable transport and logistics
+          solutions that connect businesses, cargo and people
+          while building long-term relationships based on
+          reliability, professionalism and service.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT CTA -->
+
+  <section class="cta" id="contact">
+
+    <h2>Let's Get Things Moving.</h2>
+
+    <p>
+      Need transport or logistics support?
+      Speak to VULEDZAHAUL about your requirements.
+    </p>
+
+    <a
+      href="mailto:operations@vuledzahaul.com"
+      class="btn"
+    >
+      Request a Quote
+    </a>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <strong>
+    VULEDZA<span>HAUL</span>
+  </strong>
+
+  <p>LOGISTICS & TRANSPORT</p>
+
+  <p>Moving What Matters.</p>
+
+  <p>
+    Johannesburg, Gauteng, South Africa
+    &nbsp; | &nbsp;
+    operations@vuledzahaul.com
+  </p>
+
+  <p>
+    © 2026 VULEDZAHAUL LOGISTICS (PTY) LTD.
+    All rights reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>
