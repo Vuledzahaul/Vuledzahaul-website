@@ -146,7 +146,7 @@
     /* GENERAL SECTIONS */
 
     section {
-      padding: 80px 8%;
+      padding: 80px 6%;
     }
 
     .section-heading {
@@ -175,19 +175,22 @@
 
     /* SERVICES */
 
-    .services {
-      background: #f7f8f7;
-    }
+   .services {
+  background: #f7f8f7;
+  width: 100%;
+}
 
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
+   .service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
 
    .service-card {
+     min-width: 0;
   background: white;
   padding: 35px 28px;
   border-radius: 10px;
