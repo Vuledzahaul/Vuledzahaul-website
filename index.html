@@ -338,18 +338,30 @@
     @media (max-width: 600px) {
 
 header {
-        padding: 8px 5%;
-      }
-      .brand img {
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 4%;
+}
+
+.brand img {
   width: 180px;
   height: 65px;
   object-fit: contain;
-  object-position: left center;
 }
 
-      .brand {
-        font-size: 20px;
-      }
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  width: 100%;
+}
+
+nav a {
+  margin-left: 0;
+  font-size: 12px;
+}
 
       .hero {
         padding: 60px 6%;
